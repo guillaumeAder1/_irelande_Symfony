@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- <html> -->
+<!--     <head> -->
+<!--         <meta charset="UTF-8" /> -->
+{#         <title>#}
+{#          // {% block title %}Welcome!{% endblock %}#}
+{#         </title>#}
+{#         {% block stylesheets %}{% endblock %}#}
+{#         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+<!--     </head> -->
+<!--     <body> -->
+
+{#         {% block body %}{% endblock %}#}
+{#         {% block javascripts %}{% endblock %}#}
+
+<!--     </body> -->
+<!-- </html> -->
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Test Application{% endblock %}</title>
+        
+<!--
+	Include CSS
+-->
+        {% block stylesheets %}
+            <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+<!--
+	Include CSS
+-->     
+    </head>
+    <body>
+ 	{% block mainBandeau  %}
+ 	<fieldset>
+ 		<legend>Main BAndeau Site</legend>
+ 			<h1>MASTER Templet Base.html.twig</h1>
+ 			<br/>
+    		app/ressources/views/base.html.twig
+ 	</fieldset>
+   	{% endblock %}
+  	
+  	<br/>
+  	
+    {% block titlePage %}{% endblock %}
+    
+    <br/>
+    
+        <div id="sidebar">
+            {% block sidebar %}
+            <ul>
+            	<li><a href="{{ path('akmhello_zello_home')}}">Home zello</a></li>
+            	<li><a href="{{ path('akmhello_zello' , { 'name' : 'JACOBS' })}}">Zello Jacobs</a></li>
+                <li><a href="{{ path('akmhello_homepage' , { 'name' : 'JACOBS' })}}">Hello Jacobs</a></li>
+                <li><a href="{{ path('akmhello_homepage_sexe' , { 'name' : 'JACOBS', 'sexe' : "hommme" })}}">Hello Jacobs + sexe </a></li>
+            </ul>
+            {% endblock %}
+        </div>
+	<br/>
+        <div id="content">
+        	{% block content %}{% endblock %}
+        	<br/>
+            {% block footer %}{% endblock %}
+        </div>
+        
+<!--
+	Include JAVASCRIPT
+-->
+        {% block javascripts %}
+            <script src="{{ asset('js/jQuery.2.1.0.js') }}" type="text/javascript"></script>
+        {% endblock %}
+<!--
+	Include JAVASCRIPT
+-->     
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block titlePage %}
+<fieldset>
+	<legend>TitlePage</legend>
+Template 01 BASE akm/ressources/views/default/base.html.twig
+</fieldset>
+{% endblock %}
+
+
+{% block content%}
+<fieldset>
+	<legend>Content blockData</legend>
+		<div class="blockData">
+			{{ name |upper }} 
+		<p>
+			njkdbf jdsb fjsbdf jsdbf jsdbf jsh
+			njkdbf jdsb fjsbdf jsdbf jsdbf jsh
+			njkdbf jdsb fjsbdf jsdbf jsdbf jsh
+			njkdbf jdsb fjsbdf jsdbf jsdbf jsh
+			
+		</p>
+		{% if sexe == 'h' %}
+			OK {{ sexe }} = HOMME
+		{% elseif sexe == 'f' %}
+			OK {{ sexe }} = FEMME
+		{% else %}
+			ERREUR 
+		{% endif %}
+		</div>
+</fieldset>
+{% endblock %}
+
+
+        
+
+{% block footer %}
+<fieldset>
+	<legend>Footer</legend>
+		<div class="footer">
+			{{ asset('images/logo.png') }}
+		<br/>
+			fichier twig : "Default/base.html.twig" ---
+		</div>
+		{{  path('akmhello_homepage_sexe' , {'name' : 'jacobs' , 'sexe' :'homme'})|upper }}
+</fieldset>
+
+{% endblock %}
+
+        

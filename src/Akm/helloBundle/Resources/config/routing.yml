@@ -1,0 +1,14 @@
+akmhello_zello:
+    pattern: /zello/{name}
+    defaults: { _controller: AkmhelloBundle:Zello:index }
+akmhello_zello_home:
+    pattern: /zello/
+    defaults: { _controller: AkmhelloBundle:Zello:home }
+akmhello_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AkmhelloBundle:Default:index }
+akmhello_homepage_sexe:
+    pattern:  /hello/{name}/{sexe}
+    defaults: { _controller: AkmhelloBundle:Default:sexe , sexe: h }
+    requirements:
+        sexe : h|f

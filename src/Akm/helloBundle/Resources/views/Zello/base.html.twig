@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+ {{ parent() }}
+
+    <link href="{{ asset('bundles/akmhello/css/style.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block footer %}
+<fieldset>
+	<legend>Footer</legend>
+		{{  path('akmhello_zello_home')|upper }}
+</fieldset>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	 
+	 <script src="{{ asset('bundles/akmhello/js/script.js') }}" type="text/javascript"></script>
+        
+{% endblock %}
