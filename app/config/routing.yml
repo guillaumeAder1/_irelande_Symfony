@@ -1,3 +1,7 @@
+akm_article:
+    resource: "@AkmArticleBundle/Resources/config/routing.yml"
+    prefix:   /
+
 akmhello:
     resource: "@AkmhelloBundle/Resources/config/routing.yml"
     prefix:   /

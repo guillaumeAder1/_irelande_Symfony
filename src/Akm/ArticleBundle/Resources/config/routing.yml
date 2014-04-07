@@ -1,0 +1,33 @@
+akm_article_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AkmArticleBundle:Default:index }
+akm_article_add:
+    pattern: /addArticle/{articleName}
+    defaults: { _controller: AkmArticleBundle:Default:addarticle }
+akm_add_user:
+    pattern: /addUser/{newUser}
+    defaults: { _controller: AkmArticleBundle:Default:addUser }
+akm_show_user:
+    pattern: /user/showUser/{idUser}
+    defaults: { _controller: AkmArticleBundle:Default:showUser }
+user:
+    pattern: /user/
+    defaults: { _controller: AkmArticleBundle:User:index }
+user_show:
+    pattern: /{id}/show
+    defaults: { _controller: AkmArticleBundle:User:show }
+user_edit:
+    pattern: /user_edit/{id}
+    defaults: { _controller: AkmArticleBundle:User:edit }
+user_new:
+    pattern: /new
+    defaults: { _controller: AkmArticleBundle:User:new }
+user_delete:
+    pattern: /user_new/{id}
+    defaults: { _controller: AkmArticleBundle:User:delete }
+user_update:
+    pattern: /{id}/update
+    defaults: { _controller: AkmArticleBundle:User:update }
+user_create:
+    pattern: /create
+    defaults: { _controller: AkmArticleBundle:User:create }
